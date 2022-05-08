@@ -20,4 +20,12 @@ Modularity:
 Instead of building the entire table at once we can break them down into pieces which can be reused to build other tables
 Ex: Car parts
 
+Models are denormalized -> ad hoc analytics, does not follow the kimball model
+
+Types of Models:
+1. Source - Raw Data
+2. Staging - one to one with source with minor tweaks like renaming/casting
+3. Intermediate - btw staging and final, built on staging
+4. Fact - Things that are occuring/ have occured Ex: events, clicks, votes
+5. Dim - Things that don't change often. Person, place or Things
 

@@ -1,3 +1,8 @@
+/*
+date:08-05-2022
+description: Staging table for orders
+*/
+
 with orders as (
 
     select

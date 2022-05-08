@@ -3,7 +3,6 @@ date:08-05-2022
 description: Creates dim_customer table joining customer info with his/her order info
 */
 
-{{ config (materialized="table")}}
 
 with customers as (
 
@@ -13,18 +12,21 @@ with customers as (
 
 orders as (
 
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-    from raw.jaffle_shop.orders    
+    select * from {{ ref('fct_orders') }}
+    
 
 ),
 
 customer_orders as (
 
-    select * from {{ ref('stg_orders') }}
+    select
+        customer_id,
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders,
+        sum(amount) as lifetime_value
+    from orders
+    group by customer_id
 ),
 
 final_cte as (
