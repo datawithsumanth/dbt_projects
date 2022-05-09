@@ -29,3 +29,12 @@ Types of Models:
 4. Fact - Things that are occuring/ have occured Ex: events, clicks, votes
 5. Dim - Things that don't change often. Person, place or Things
 
+--------------------------------------------------------------------------------------------------------------------------
+
+## Source
+
+Configured in yml file
+Advantages
+1. Changes need to be made in 1 place
+2. Can track lineage
+
