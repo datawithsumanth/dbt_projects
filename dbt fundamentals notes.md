@@ -48,3 +48,15 @@ Types
 2. Specific tests are specific queries that you run against your models. These are run on the entire model. Added under tests folder like a model
 
 dbt ships with four built in tests: unique, not null, accepted values, relationships
+
+--------------------------------------------------------------------------------------------------------------------------
+
+## Documentation
+
+Docs in dbt go hand in hand with the models. They do not need a separate tool
+
+--------------------------------------------------------------------------------------------------------------------------
+## Deployment
+
+Create a new deployment environment 
+Create a job which runs on a schedule 
