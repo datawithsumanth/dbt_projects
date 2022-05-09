@@ -38,3 +38,25 @@ Advantages
 1. Changes need to be made in 1 place
 2. Can track lineage
 
+--------------------------------------------------------------------------------------------------------------------------
+
+## Tests
+
+Tests help you find the bugs before your stakeholders do
+Types
+1. Generic tests are written in YAML and return the number of records that do not meet your assertions. 
+2. Specific tests are specific queries that you run against your models. These are run on the entire model. Added under tests folder like a model
+
+dbt ships with four built in tests: unique, not null, accepted values, relationships
+
+--------------------------------------------------------------------------------------------------------------------------
+
+## Documentation
+
+Docs in dbt go hand in hand with the models. They do not need a separate tool
+
+--------------------------------------------------------------------------------------------------------------------------
+## Deployment
+
+Create a new deployment environment 
+Create a job which runs on a schedule 
